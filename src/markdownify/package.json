@@ -1,0 +1,33 @@
+{
+  "name": "mcp-markdownify-server",
+  "version": "0.0.1",
+  "description": "MCP Markdownify Server - Model Context Protocol Server for Converting Almost Anything to Markdown",
+  "license": "MIT",
+  "author": "@zcaceres (@zachcaceres | zach.dev)",
+  "homepage": "https://github.com/zcaceres/mcp-markdownify-server",
+  "bugs": "https://github.com/zcaceres/mcp-markdownify-server/issues",
+  "type": "module",
+  "bin": {
+    "mcp-markdownify-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "echo No tests available"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.0.1",
+    "@modelcontextprotocol/servers": "file:../..",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.3",
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  }
+}
